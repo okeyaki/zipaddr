@@ -73,7 +73,17 @@ func (s *SqliteSink) createRevisionTable() error {
 
 func (s *SqliteSink) createDataTable() error {
 	query := fmt.Sprintf(
-		`CREATE TABLE data_%s (zipcode VARCHAR(255), town VARCHAR(255))`,
+		`CREATE TABLE data_%s (
+				jiscode VARCHAR(255)
+			, zipcode VARCHAR(255)
+			, zipcode_old VARCHAR(255)
+			, prefecture VARCHAR(255)
+			, city VARCHAR(255)
+			, town VARCHAR(255)
+			, prefecture_ruby VARCHAR(255)
+			, city_ruby VARCHAR(255)
+			, town_ruby VARCHAR(255)
+		)`,
 		s.revision,
 	)
 
@@ -100,13 +110,30 @@ func (s *SqliteSink) insertRevision() error {
 
 func (s *SqliteSink) insertData(rec []string) error {
 	query := fmt.Sprintf(
-		"INSERT INTO data_%s (zipcode, town) VALUES (?, ?)",
+		`INSERT INTO data_%s (
+				jiscode
+			, zipcode_old
+			, zipcode
+			, prefecture_ruby
+			, city_ruby
+			, town_ruby
+			, prefecture
+			, city
+			, town
+		) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
 		s.revision,
 	)
 
 	_, err := s.db.Exec(
 		query,
+		rec[0],
+		rec[1],
 		rec[2],
+		rec[3],
+		rec[4],
+		rec[5],
+		rec[6],
+		rec[7],
 		rec[8],
 	)
 
