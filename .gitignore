@@ -1,0 +1,26 @@
+#
+# このプロジェクト特有のファイル
+#
+
+*.db
+
+#
+# 一般的なファイル
+#
+
+# Dotenv
+.env
+
+# Mac OS
+__MAXOSX/
+.DS_Store
+
+# Vi
+*.swp
+
+# Visual Studio Code
+*.code-workspace
+
+# Windows
+Thumbs.db
+desktop.ini
