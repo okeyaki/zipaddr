@@ -65,5 +65,5 @@ $ zipaddr serve --data-dir /var/lib/zipaddr --listen 0.0.0.0:1234
 ### 郵便番号を検索する
 
 ```sh
-$ http :3000/addrs/0600010
+$ curl http://localhost:1234/addrs/0600010
 ```
