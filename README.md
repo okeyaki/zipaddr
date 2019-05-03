@@ -4,7 +4,7 @@ Zipaddr はシングルバイナリで動作する郵便番号検索サーバー
 
 ## 注意事項
 
-- このプログラムは(日本郵便株式会社が提供する郵便番号データ)[https://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html]を利用しています。
+- このプログラムは [日本郵便株式会社が提供する郵便番号データ](https://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html) を利用しています。
 
 ## インストール方法
 
