@@ -19,7 +19,7 @@ func newNormalizeCommand() *cobra.Command {
 
 	normalize := &cobra.Command{
 		Use:   "normalize",
-		Short: "TBD",
+		Short: "郵便番号データを正規化します",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			var src io.Reader
 			if config.File == "" {
