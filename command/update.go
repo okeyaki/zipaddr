@@ -46,5 +46,7 @@ func newUpdateCommand() *cobra.Command {
 
 	update.Flags().StringVarP(&config.DataDir, "data-dir", "", "", "TBD")
 
+	update.MarkFlagRequired("data-dir")
+
 	return update
 }
