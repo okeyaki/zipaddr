@@ -21,7 +21,7 @@ func newServeCommand() *cobra.Command {
 
 	serve := &cobra.Command{
 		Use:   "serve",
-		Short: "TBD",
+		Short: "郵便番号検索サーバーを起動します",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			s := storage.SqliteStorage{
 				DataDir: config.DataDir,
