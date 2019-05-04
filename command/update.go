@@ -44,7 +44,7 @@ func newUpdateCommand() *cobra.Command {
 		},
 	}
 
-	update.PersistentFlags().StringVarP(&config.DataDir, "data-dir", "", "", "TBD")
+	update.Flags().StringVarP(&config.DataDir, "data-dir", "", "", "TBD")
 
 	return update
 }

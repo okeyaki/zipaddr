@@ -46,7 +46,7 @@ func newNormalizeCommand() *cobra.Command {
 		},
 	}
 
-	normalize.PersistentFlags().StringVarP(&config.File, "file", "f", "", "TBD")
+	normalize.Flags().StringVarP(&config.File, "file", "f", "", "TBD")
 
 	return normalize
 }

@@ -51,8 +51,8 @@ func newServeCommand() *cobra.Command {
 		},
 	}
 
-	serve.PersistentFlags().StringVarP(&config.DataDir, "data-dir", "", "", "TBD")
-	serve.PersistentFlags().StringVarP(&config.Listen, "listen", "", "0.0.0.0:3000", "TBD")
+	serve.Flags().StringVarP(&config.DataDir, "data-dir", "", "", "TBD")
+	serve.Flags().StringVarP(&config.Listen, "listen", "", "0.0.0.0:3000", "TBD")
 
 	return serve
 }
